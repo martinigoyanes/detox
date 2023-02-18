@@ -3,3 +3,5 @@ emnlp2021/style_transfer/condBERT/vocabularies
 .idea
 __pycache__
 .ipynb_checkpoints
+**models**
+**cache**

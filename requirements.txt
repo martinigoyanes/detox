@@ -9,4 +9,5 @@ sentencepiece
 keras_preprocessing
 flair
 scipy
-
+wandb
+tensorboard

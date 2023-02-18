@@ -485,6 +485,7 @@ def main():
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.INFO
     )
+    logger.info(f"tensorboard: {args.tensorboard}")
     
     set_seeds(args.random_seed)
     
@@ -502,7 +503,7 @@ def main():
         config.resid_pdrop = args.dropout
         config.output_past = True
 
-        gedi_model = GPT2LMHeadModel.from_pretrained('gpt2-medium', config=config)
+    gedi_model = GPT2LMHeadModel.from_pretrained('gpt2-medium', config=config)
     
     #if args.model_name_or_path:
     #    old_tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path)

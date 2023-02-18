@@ -10,6 +10,3 @@ gdown https://drive.google.com/drive/folders/1UlU0g9HUerK0xW8B_MKV08DkIPEs44-Q -
 gdown --id 1rBSrbL_6gfDqOCpNz1JrOJK9gKrkKxhv -O models/cola/checkpoint_best.pt
 # download the similarity model from http://style.cs.umass.edu/
 gdown https://drive.google.com/drive/folders/1lBN2nbzxtpqbPUyeURtzt0k1kBY6u6Mj -O models/sim --folder
-
-# DOWNLOAD THE MODELS FOR INFERENCE
-

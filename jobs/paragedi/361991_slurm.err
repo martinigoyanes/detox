@@ -1,0 +1,32 @@
+02/18/2023 21:58:10 - INFO - __main__ -   tensorboard: True
+02/18/2023 21:58:10 - INFO - modeling_utils -   loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-medium-pytorch_model.bin from cache at /Midgard/home/martinig/.cache/huggingface/transformers/4b337a4f3b7d3e1518f799e238af607498c02938a3390152aaec7d4dabca5a02.8769029be4f66a5ae1055eefdd1d11621b901d510654266b8681719fff492d6e
+02/18/2023 21:58:25 - INFO - modeling_utils -   Weights of GPT2LMHeadModel not initialized from pretrained model: ['lm_head.weight']
+02/18/2023 21:58:25 - INFO - __main__ -   Changing input and output embeddings of GeDi model
+02/18/2023 21:58:38 - INFO - __main__ -   Features already exist, loading...
+02/18/2023 21:59:16 - INFO - __main__ -   Features already exist, loading...
+02/18/2023 21:59:17 - INFO - __main__ -   Training begins!
+02/18/2023 21:59:17 - INFO - __main__ -   Total optimization steps: 135390
+02/18/2023 21:59:17 - INFO - __main__ -   Starting epoch 0
+02/18/2023 21:59:57 - INFO - __main__ -   epoch: 0, global step: 100/135390, training loss: 2.428929
+/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:257: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+02/18/2023 22:00:29 - INFO - __main__ -   epoch: 0, global step: 200/135390, training loss: 2.204969
+02/18/2023 22:01:00 - INFO - __main__ -   epoch: 0, global step: 300/135390, training loss: 2.156286
+02/18/2023 22:01:32 - INFO - __main__ -   epoch: 0, global step: 400/135390, training loss: 2.113995
+02/18/2023 22:02:04 - INFO - __main__ -   epoch: 0, global step: 500/135390, training loss: 2.113602
+02/18/2023 22:02:36 - INFO - __main__ -   epoch: 0, global step: 600/135390, training loss: 2.088812
+02/18/2023 22:03:08 - INFO - __main__ -   epoch: 0, global step: 700/135390, training loss: 2.102001
+02/18/2023 22:03:40 - INFO - __main__ -   epoch: 0, global step: 800/135390, training loss: 2.039536
+02/18/2023 22:04:12 - INFO - __main__ -   epoch: 0, global step: 900/135390, training loss: 2.015674
+02/18/2023 22:04:44 - INFO - __main__ -   epoch: 0, global step: 1000/135390, training loss: 2.014045
+02/18/2023 22:05:16 - INFO - __main__ -   epoch: 0, global step: 1100/135390, training loss: 2.022587
+02/18/2023 22:05:48 - INFO - __main__ -   epoch: 0, global step: 1200/135390, training loss: 1.956255
+02/18/2023 22:06:20 - INFO - __main__ -   epoch: 0, global step: 1300/135390, training loss: 1.979402
+02/18/2023 22:06:52 - INFO - __main__ -   epoch: 0, global step: 1400/135390, training loss: 1.924526
+02/18/2023 22:07:24 - INFO - __main__ -   epoch: 0, global step: 1500/135390, training loss: 1.951737
+02/18/2023 22:07:56 - INFO - __main__ -   epoch: 0, global step: 1600/135390, training loss: 1.943036
+02/18/2023 22:08:28 - INFO - __main__ -   epoch: 0, global step: 1700/135390, training loss: 1.845744
+02/18/2023 22:09:00 - INFO - __main__ -   epoch: 0, global step: 1800/135390, training loss: 1.895931
+02/18/2023 22:09:32 - INFO - __main__ -   epoch: 0, global step: 1900/135390, training loss: 1.933273
+02/18/2023 22:10:04 - INFO - __main__ -   epoch: 0, global step: 2000/135390, training loss: 1.889173
+02/18/2023 22:10:36 - INFO - __main__ -   epoch: 0, global step: 2100/135390, training loss: 1.890790
