@@ -1,0 +1,39 @@
+02/19/2023 09:28:33 - INFO - __main__ -   tensorboard: True
+02/19/2023 09:28:34 - INFO - modeling_utils -   loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-medium-pytorch_model.bin from cache at /Midgard/home/martinig/.cache/huggingface/transformers/4b337a4f3b7d3e1518f799e238af607498c02938a3390152aaec7d4dabca5a02.8769029be4f66a5ae1055eefdd1d11621b901d510654266b8681719fff492d6e
+02/19/2023 09:28:53 - INFO - modeling_utils -   Weights of GPT2LMHeadModel not initialized from pretrained model: ['lm_head.weight']
+02/19/2023 09:28:53 - INFO - __main__ -   Changing input and output embeddings of GeDi model
+02/19/2023 09:29:05 - INFO - __main__ -   Features already exist, loading...
+02/19/2023 09:29:41 - INFO - __main__ -   Features already exist, loading...
+02/19/2023 09:29:42 - INFO - __main__ -   Training begins!
+02/19/2023 09:29:42 - INFO - __main__ -   Total optimization steps: 67696
+02/19/2023 09:29:42 - INFO - __main__ -   Starting epoch 0
+Traceback (most recent call last):
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 533, in <module>
+    main()
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 519, in main
+    gedi_model = train(args, gedi_model, new_tokenizer, writer)
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 269, in train
+    results = forward_step(args, model, batch, src_id, tgt_id)
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 149, in forward_step
+    outputs = model(**inputs)
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_gpt2.py", line 653, in forward
+    transformer_outputs = self.transformer(
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_gpt2.py", line 532, in forward
+    outputs = block(
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_gpt2.py", line 233, in forward
+    output_attn = self.attn(
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_gpt2.py", line 186, in forward
+    x = self.c_attn(x)
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_utils.py", line 1191, in forward
+    x = torch.addmm(self.bias, x.view(-1, x.size(-1)), self.weight)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB (GPU 0; 10.76 GiB total capacity; 9.68 GiB already allocated; 6.56 MiB free; 9.93 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

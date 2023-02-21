@@ -5,9 +5,9 @@
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=martinig@kth.se
 #SBATCH --constrain="rivendell"
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --cpus-per-task=2
-#SBATCH --mem=16GB
+#SBATCH --mem=10GB
 #SBATCH -t 0-6:00  # time limit: (D-HH:MM) 
 
 
@@ -31,6 +31,7 @@ TOKENIZER_NAME=ceshine/t5-paraphrase-paws-msrp-opinosis # default
 MAX_SEQUENCE_LEN=128 # default
 BATCH_SIZE=4 # default=8
 LOGGING_STEPS=100
+SAVING_STEPS=2000
 
 mkdir -p "${JOB_PATH}/model"
 mkdir -p "${JOB_PATH}/logs"
@@ -46,4 +47,5 @@ python emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py \
 --train_batch_size $BATCH_SIZE \
 --eval_batch_size $BATCH_SIZE \
 --logging_steps $LOGGING_STEPS \
+--saving_steps $SAVING_STEPS \
 --tensorboard

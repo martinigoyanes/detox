@@ -11,3 +11,4 @@ flair
 scipy
 wandb
 tensorboard
+jupyterlab

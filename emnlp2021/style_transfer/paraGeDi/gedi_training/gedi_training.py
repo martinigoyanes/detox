@@ -112,7 +112,7 @@ def prepare_dataset(args, tokenizer, mode='train'):
     attention_masks = torch.tensor(features['attention_mask'], dtype=torch.long)
     labels = torch.tensor(features['labels'], dtype=torch.long)
     
-    dataset = TensorDataset(input_ids, attention_masks, labels)
+    dataset = TensorDataset(input_ids[:24], attention_masks[:24], labels[:24])
     
     return dataset
 
@@ -253,7 +253,7 @@ def train(args, model, tokenizer, writer):
     
     model.zero_grad()
     
-    print(tokenizer.encode(args.code_0), tokenizer.encode(args.code_1))
+    logger.info(f"code_0: {tokenizer.encode(args.code_0)} - code_1: {tokenizer.encode(args.code_1)}")
     src_id = tokenizer.encode(args.code_0)[0]
     tgt_id = tokenizer.encode(args.code_1)[0]
     
@@ -267,12 +267,22 @@ def train(args, model, tokenizer, writer):
                 continue
             
             results = forward_step(args, model, batch, src_id, tgt_id)
-            loss = results['loss']
+
+            # if n_gpu > 1:
+            if False:
+                loss = results['loss'].mean()
+                gen_loss = results['gen_loss'].mean()
+                disc_loss = results['disc_loss'].mean()
+            else:
+                loss = results['loss']
+                gen_loss = results['gen_loss']
+                disc_loss = results['disc_loss']
+
             loss.backward()
             
             running_loss_t += loss.item()
-            running_loss_g += results['gen_loss'].item()
-            running_loss_d += results['disc_loss'].item()
+            running_loss_g += gen_loss.item()
+            running_loss_d += disc_loss.item()
             
             if (step + 1) % args.gradient_accumulation_steps == 0:
                 torch.nn.utils.clip_grad_norm_(model.parameters(), args.grad_max_norm)
@@ -313,6 +323,7 @@ def train(args, model, tokenizer, writer):
                     if not os.path.exists(output_dir):
                         os.makedirs(output_dir)
                    
+                    model = model.module if hasattr(model, 'module') else model  # Only save the model it-self
                     model.save_pretrained(output_dir)
 
                     torch.save(args, os.path.join(output_dir, 'training_args.bin'))
@@ -485,7 +496,7 @@ def main():
         datefmt="%m/%d/%Y %H:%M:%S",
         level=logging.INFO
     )
-    logger.info(f"tensorboard: {args.tensorboard}")
+    logger.info(f"Use tensorboard: {args.tensorboard}")
     
     set_seeds(args.random_seed)
     
@@ -516,12 +527,20 @@ def main():
         gedi_model = adjust_embeddings(gedi_model, old_tokenizer, new_tokenizer)
     
     gedi_model.to(args.device)
+    logger.info(gedi_model)
+
+    n_gpu = torch.cuda.device_count()
+    logger.info(f"device: {args.device}, n_gpu: {n_gpu}")
+    if n_gpu > 1:
+        gedi_model = torch.nn.DataParallel(gedi_model)
+
     gedi_model = train(args, gedi_model, new_tokenizer, writer)
-    
+
     output_dir = os.path.join(args.working_dir, "model_last_checkpoint")
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-                   
+    
+    gedi_model = gedi_model.module if hasattr(gedi_model, 'module') else gedi_model  # Only save the model it-self
     gedi_model.save_pretrained(output_dir)
 
     torch.save(args, os.path.join(output_dir, 'training_args.bin'))

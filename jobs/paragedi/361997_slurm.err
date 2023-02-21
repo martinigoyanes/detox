@@ -1,0 +1,431 @@
+02/19/2023 11:49:21 - INFO - __main__ -   tensorboard: True
+02/19/2023 11:49:22 - INFO - modeling_utils -   loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-medium-pytorch_model.bin from cache at /Midgard/home/martinig/.cache/huggingface/transformers/4b337a4f3b7d3e1518f799e238af607498c02938a3390152aaec7d4dabca5a02.8769029be4f66a5ae1055eefdd1d11621b901d510654266b8681719fff492d6e
+02/19/2023 11:49:49 - INFO - modeling_utils -   Weights of GPT2LMHeadModel not initialized from pretrained model: ['lm_head.weight']
+02/19/2023 11:49:49 - INFO - __main__ -   Changing input and output embeddings of GeDi model
+02/19/2023 11:50:06 - INFO - __main__ -   GPT2LMHeadModel(
+  (transformer): GPT2Model(
+    (wte): Embedding(32100, 1024)
+    (wpe): Embedding(1024, 1024)
+    (drop): SharedDropout()
+    (h): ModuleList(
+      (0): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (1): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (2): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (3): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (4): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (5): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (6): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (7): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (8): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (9): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (10): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (11): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (12): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (13): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (14): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (15): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (16): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (17): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (18): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (19): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (20): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (21): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (22): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (23): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+    )
+    (ln_f): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+  )
+  (lm_head): Linear(in_features=1024, out_features=32100, bias=False)
+)
+02/19/2023 11:50:06 - INFO - __main__ -   device: cuda:0, n_gpu: 1
+02/19/2023 11:50:06 - INFO - __main__ -   Features already exist, loading...
+02/19/2023 11:50:43 - INFO - __main__ -   Features already exist, loading...
+02/19/2023 11:50:44 - INFO - __main__ -   Training begins!
+02/19/2023 11:50:44 - INFO - __main__ -   Total optimization steps: 67696
+--- Logging error ---
+Traceback (most recent call last):
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/logging/__init__.py", line 1081, in emit
+    msg = self.format(record)
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/logging/__init__.py", line 925, in format
+    return fmt.format(record)
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/logging/__init__.py", line 664, in format
+    record.message = record.getMessage()
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/logging/__init__.py", line 369, in getMessage
+    msg = msg % self.args
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 552, in <module>
+    main()
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 537, in main
+    gedi_model = train(args, gedi_model, new_tokenizer, writer)
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 256, in train
+    logger.info(tokenizer.encode(args.code_0), tokenizer.encode(args.code_1))
+Message: [12068, 1]
+Arguments: ([1389, 1],)
+02/19/2023 11:50:44 - INFO - __main__ -   Starting epoch 0
+Traceback (most recent call last):
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 552, in <module>
+    main()
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 537, in main
+    gedi_model = train(args, gedi_model, new_tokenizer, writer)
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 269, in train
+    results = forward_step(args, model, batch, src_id, tgt_id)
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 149, in forward_step
+    outputs = model(**inputs)
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_gpt2.py", line 653, in forward
+    transformer_outputs = self.transformer(
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_gpt2.py", line 532, in forward
+    outputs = block(
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_gpt2.py", line 233, in forward
+    output_attn = self.attn(
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_gpt2.py", line 186, in forward
+    x = self.c_attn(x)
+  File "/Midgard/home/martinig/miniconda3/envs/detox/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Midgard/home/martinig/detox/emnlp2021/style_transfer/paraGeDi/gedi_training/modeling_utils.py", line 1191, in forward
+    x = torch.addmm(self.bias, x.view(-1, x.size(-1)), self.weight)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 24.00 MiB (GPU 0; 10.76 GiB total capacity; 9.68 GiB already allocated; 6.56 MiB free; 9.93 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
