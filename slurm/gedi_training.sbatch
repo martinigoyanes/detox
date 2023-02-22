@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-#SBATCH --output=jobs/paragedi/%J_slurm.out
-#SBATCH --error=jobs/paragedi/%J_slurm.err
+#SBATCH --output=jobs/paragedi/training/%J_slurm.out
+#SBATCH --error=jobs/paragedi/training/%J_slurm.err
 #SBATCH --mail-type=BEGIN,END,FAIL
 #SBATCH --mail-user=martinig@kth.se
-#SBATCH --constrain="rivendell"
-#SBATCH --gres=gpu:2
+#SBATCH --constrain="gondor"
+#SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=2
-#SBATCH --mem=10GB
+#SBATCH --mem=12GB
 #SBATCH -t 0-6:00  # time limit: (D-HH:MM) 
 
 
@@ -23,7 +23,7 @@ source "${HOME}/miniconda3/etc/profile.d/conda.sh"
 conda activate detox
 
 
-JOB_PATH=/Midgard/home/martinig/detox/jobs/paragedi/${SLURM_JOB_ID}
+JOB_PATH=/Midgard/home/martinig/detox/jobs/paragedi/training/${SLURM_JOB_ID}
 DATA_PATH=/Midgard/home/martinig/detox/emnlp2021/data
 
 N_EPOCHS=2 # default

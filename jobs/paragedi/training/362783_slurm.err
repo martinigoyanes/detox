@@ -1,0 +1,4 @@
+  File "emnlp2021/style_transfer/paraGeDi/gedi_training/gedi_training.py", line 285
+    running_loss_d += disc_loss.detach()cpu()..item()
+                                        ^
+SyntaxError: invalid syntax

@@ -4,7 +4,6 @@ pandas
 torch
 nltk
 transformers
-fairseq
 sentencepiece
 keras_preprocessing
 flair
@@ -12,3 +11,4 @@ scipy
 wandb
 tensorboard
 jupyterlab
+nvidia-ml-py3

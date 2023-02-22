@@ -1,0 +1,395 @@
+02/22/2023 19:47:13 - INFO - __main__ -   Use tensorboard: True
+02/22/2023 19:47:14 - INFO - modeling_utils -   loading weights file https://s3.amazonaws.com/models.huggingface.co/bert/gpt2-medium-pytorch_model.bin from cache at /Midgard/home/martinig/.cache/huggingface/transformers/4b337a4f3b7d3e1518f799e238af607498c02938a3390152aaec7d4dabca5a02.8769029be4f66a5ae1055eefdd1d11621b901d510654266b8681719fff492d6e
+02/22/2023 19:47:36 - INFO - modeling_utils -   Weights of GPT2LMHeadModel not initialized from pretrained model: ['lm_head.weight']
+02/22/2023 19:47:37 - INFO - __main__ -   Changing input and output embeddings of GeDi model
+02/22/2023 19:47:57 - INFO - __main__ -   GPT2LMHeadModel(
+  (transformer): GPT2Model(
+    (wte): Embedding(32100, 1024)
+    (wpe): Embedding(1024, 1024)
+    (drop): SharedDropout()
+    (h): ModuleList(
+      (0): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (1): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (2): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (3): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (4): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (5): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (6): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (7): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (8): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (9): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (10): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (11): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (12): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (13): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (14): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (15): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (16): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (17): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (18): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (19): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (20): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (21): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (22): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+      (23): Block(
+        (ln_1): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (attn): Attention(
+          (c_attn): Conv1D()
+          (c_proj): Conv1D()
+          (attn_dropout): SharedDropout()
+          (resid_dropout): SharedDropout()
+        )
+        (ln_2): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+        (mlp): MLP(
+          (c_fc): Conv1D()
+          (c_proj): Conv1D()
+          (dropout): SharedDropout()
+        )
+      )
+    )
+    (ln_f): LayerNorm((1024,), eps=1e-05, elementwise_affine=True)
+  )
+  (lm_head): Linear(in_features=1024, out_features=32100, bias=False)
+)
+02/22/2023 19:47:57 - INFO - __main__ -   device: cuda:0, n_gpu: 1
+02/22/2023 19:47:57 - INFO - __main__ -   Features already exist, loading...
+02/22/2023 19:48:53 - INFO - __main__ -   Features already exist, loading...
+02/22/2023 19:48:54 - INFO - __main__ -   Training begins!
+02/22/2023 19:48:54 - INFO - __main__ -   Total optimization steps: 12
+02/22/2023 19:48:54 - INFO - __main__ -   code_0: [12068, 1] - code_1: [1389, 1]
+02/22/2023 19:48:54 - INFO - __main__ -   Starting epoch 0
+02/22/2023 19:49:01 - INFO - __main__ -   Training epoch 0 finished. Evaluating.
+02/22/2023 19:49:01 - INFO - __main__ -   Evaluation discriminative loss after epoch 0 is 0.667313
+02/22/2023 19:49:01 - INFO - __main__ -   Evaluation generative loss after epoch 0 is 5.508005
+02/22/2023 19:49:01 - INFO - __main__ -   Evaluation accuracy after epoch 0 is 0.5833
+02/22/2023 19:49:01 - INFO - __main__ -   Evaluation F1 score after epoch 0 is 0.0000
+02/22/2023 19:49:01 - INFO - __main__ -   Starting epoch 1
+02/22/2023 19:49:04 - INFO - __main__ -   Training epoch 1 finished. Evaluating.
+02/22/2023 19:49:04 - INFO - __main__ -   Evaluation discriminative loss after epoch 1 is 0.666661
+02/22/2023 19:49:04 - INFO - __main__ -   Evaluation generative loss after epoch 1 is 5.240920
+02/22/2023 19:49:04 - INFO - __main__ -   Evaluation accuracy after epoch 1 is 0.7083
+02/22/2023 19:49:04 - INFO - __main__ -   Evaluation F1 score after epoch 1 is 0.0000
+02/22/2023 19:49:12 - INFO - modeling_utils -   Model weights saved in /Midgard/home/martinig/detox/jobs/paragedi/training/362785/model/model_last_checkpoint/pytorch_model.bin
+02/22/2023 19:49:12 - INFO - __main__ -   Saving model, args to /Midgard/home/martinig/detox/jobs/paragedi/training/362785/model/model_last_checkpoint

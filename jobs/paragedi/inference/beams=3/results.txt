@@ -1,0 +1,6 @@
+# Generated using metrc.py and fixing acc=1 (no style classifier trained yet)
+| Model | ACC | SIM | FL | J | BLEU |
+
+| ----- | --- | --- | -- | - | ---- |
+
+preds.txt|1.0000|0.7016|0.6479|0.4432|0.5334|

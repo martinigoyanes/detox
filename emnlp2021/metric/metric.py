@@ -14,10 +14,6 @@ from wieting_similarity.similarity_evaluator import SimilarityEvaluator
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, \
     RobertaTokenizer, RobertaForSequenceClassification
 
-from fairseq.models.roberta import RobertaModel
-from fairseq.data.data_utils import collate_tokens
-
-
 def cleanup():
     gc.collect()
     if torch.cuda.is_available():
@@ -76,49 +72,7 @@ def wieting_sim(args, inputs, preds):
 def detokenize(x):
     return x.replace(" .", ".").replace(" ,", ",").replace(" !", "!").replace(" ?", "?").replace(" )",")").replace("( ", "(")  # noqa
 
-
 def do_cola_eval(args, preds, soft=False):
-    print('Calculating CoLA acceptability stats')
-
-    path_to_data = os.path.join(args.cola_classifier_path, 'cola-bin')
-
-    cola_roberta = RobertaModel.from_pretrained(
-        args.cola_classifier_path, checkpoint_file=args.cola_checkpoint, data_name_or_path=path_to_data
-    )
-    cola_roberta.eval()
-    if torch.cuda.is_available():
-        cola_roberta.cuda()
-    
-    cola_stats = []
-    
-    for i in tqdm.tqdm(range(0, len(preds), args.batch_size), total=len(preds) // args.batch_size):
-        sentences = preds[i:i + args.batch_size]
-
-        # detokenize and BPE encode input
-        sentences = [cola_roberta.bpe.encode(detokenize(sent)) for sent in sentences]
-
-        batch = collate_tokens(
-            [cola_roberta.task.source_dictionary.encode_line("<s> " + sent + " </s>", append_eos=False)
-             for sent in sentences], 
-            pad_idx=1
-        )
-
-        batch = batch[:, :512]
-
-        with torch.no_grad():
-            predictions = cola_roberta.predict('sentence_classification_head', batch.long())
-        
-        if soft:
-            prediction_labels = torch.softmax(predictions, axis=1)[:, 1].cpu().numpy()
-        else:
-            prediction_labels = predictions.argmax(axis=1).cpu().numpy()
-        # label 0 means acceptable. Need to inverse
-        cola_stats.extend(list(1 - prediction_labels))
-    
-    return np.array(cola_stats)
-
-
-def do_cola_eval_transformers(args, preds, soft=False):
     print('Calculating CoLA acceptability stats')
     path = args.cola_classifier_path
 
@@ -147,8 +101,8 @@ if __name__ == "__main__":
     parser.add_argument("--classifier_path", default='SkolkovoInstitute/roberta_toxicity_classifier')
     parser.add_argument("--threshold", default=0.8, type=float)
 
-    parser.add_argument("--cola_classifier_path", default='models/cola')
-    parser.add_argument("--cola_checkpoint", default='checkpoint_best.pt')
+    # Use official model uploaded to HuggingFace recently
+    parser.add_argument("--cola_classifier_path", default='cointegrated/roberta-large-cola-krishna2020')
     parser.add_argument("--batch_size", default=32, type=int)
 
     args = parser.parse_args()
@@ -158,9 +112,10 @@ if __name__ == "__main__":
         preds = preds_file.readlines()
 
     # accuracy of style transfer
-    accuracy_by_sent = classify_preds(args, preds)
-    accuracy = sum(accuracy_by_sent)/len(preds)
-    cleanup()
+    # accuracy_by_sent = classify_preds(args, preds)
+    # accuracy = sum(accuracy_by_sent)/len(preds)
+    accuracy = accuracy_by_sent = 1
+    # cleanup()
     
     # similarity
     bleu = calc_bleu(inputs, preds)
